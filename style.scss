@@ -1,0 +1,137 @@
+// Fonts
+@import url("https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap");
+// reset
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: "Libre Franklin";
+  font-size: 20px;
+}
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+.icone {
+  width: 50px;
+  height: 50px;
+}
+// Colors
+$primary-color: hsl(223, 87%, 63%);
+$second-color0: hsl(223, 92%, 81%);
+$second-color1: hsl(354, 100%, 66%);
+$neutral-color0: hsl(0, 0%, 59%);
+$neutral-color1: hsl(209, 33%, 12%);
+// Devices
+$mobile: 376px;
+@mixin d($size) {
+  @if $size == m {
+    @media screen and (max-width: $mobile) {
+      @content;
+    }
+  }
+}
+// Site
+body {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+main {
+  display: grid;
+  grid-template-columns: 750px;
+  justify-items: center;
+  @include d(m) {
+    grid-template-columns: 300px;
+  }
+  .img-1 {
+    margin-bottom: 30px;
+    margin-top: 20px;
+  }
+  .title {
+    h1 {
+      color: $neutral-color0;
+      font-size: 2rem;
+      font-weight: 300;
+      @include d(m) {
+        text-align: center;
+        font-size: 1.25rem;
+      }
+      span {
+        color: $neutral-color1;
+        font-size: 2rem;
+        font-weight: 600;
+        @include d(m) {
+          font-size: 1.25rem;
+        }
+      }
+    }
+    p {
+      text-align: center;
+      color: $neutral-color1;
+      font-weight: 300;
+      font-size: 1rem;
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+  }
+  form {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    @include d(m) {
+      grid-template-columns: 1fr;
+    }
+    input {
+      padding: 10px 20px;
+      flex-grow: 1;
+      border: 1px solid $neutral-color0;
+      border-radius: 40px;
+      grid-column: 1 / 3;
+      @include d(m) {
+        grid-column: 1;
+      }
+    }
+    button {
+      background-color: $primary-color;
+      padding: 15px 60px;
+      border: none;
+      border-radius: 40px;
+      color: white;
+      font-weight: 600;
+      &:hover {
+        background: $second-color0;
+      }
+    }
+    .output-email {
+      // Propriedade nova
+      visibility: hidden;
+      grid-column: 1 / -1;
+      margin: 5px 20px;
+      font-family: "Libre Franklin";
+      font-size: 1rem;
+      color: $second-color1;
+      font-weight: 300;
+      font-style: italic;
+    }
+  }
+  h2 {
+    font-weight: 300;
+    color: $neutral-color0;
+  }
+}
+.icon-nav {
+  display: flex;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  img {
+    width: 40px;
+    fill: currentColor;
+    color: $primary-color;
+  }
+}
+.ativar {
+  visibility: visible !important;
+}
