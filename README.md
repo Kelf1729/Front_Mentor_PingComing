@@ -66,11 +66,7 @@ Aprendi a utilizar o input de dados em formato de texto e a manipulação e extr
 </form>
 ```
 
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
+Utilização da expressão regular para determinar se um string ou dados de entrada estão no formato necessário de acordo com o pedido pelo projeto.
 
 ```js
 const mensagem = document.querySelector(".output-email");

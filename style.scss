@@ -126,10 +126,13 @@ main {
   display: flex;
   padding-top: 20px;
   padding-bottom: 10px;
-  img {
-    width: 40px;
-    fill: currentColor;
-    color: $primary-color;
+  .ionicon {
+    fill: $primary-color;
+    &:hover {
+      background-color: $primary-color;
+      border-radius: 50%;
+      fill: #fff;
+    }
   }
 }
 .ativar {

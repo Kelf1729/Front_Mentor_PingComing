@@ -121,10 +121,13 @@ main h2 {
   padding-top: 20px;
   padding-bottom: 10px;
 }
-.icon-nav img {
-  width: 40px;
-  fill: currentColor;
-  color: hsl(223, 87%, 63%);
+.icon-nav .ionicon {
+  fill: hsl(223, 87%, 63%);
+}
+.icon-nav .ionicon:hover {
+  background-color: hsl(223, 87%, 63%);
+  border-radius: 50%;
+  fill: #fff;
 }
 
 .ativar {
